@@ -1,0 +1,4 @@
+{
+  "scenario": "request-approval-rejection",
+  "description": "Seed pending requests and matching inventory for approve/reject side-effect checks."
+}

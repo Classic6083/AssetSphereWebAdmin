@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Asset Sphere Web Mock User Flow Suite" parallel="false">
+    <test name="Web User Flows">
+        <classes>
+            <class name="com.assetsphere.tests.mock.WebMockUserFlowCoverageTest"/>
+        </classes>
+    </test>
+</suite>

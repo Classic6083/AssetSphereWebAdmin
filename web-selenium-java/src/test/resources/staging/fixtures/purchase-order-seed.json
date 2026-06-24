@@ -1,0 +1,4 @@
+{
+  "scenario": "purchase-order",
+  "description": "Seed supplier and line items for purchase order creation and print validation."
+}

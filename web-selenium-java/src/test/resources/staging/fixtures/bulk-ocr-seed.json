@@ -1,0 +1,4 @@
+{
+  "scenario": "bulk-ocr-onboarding",
+  "description": "Seed a known approved PO and invoice fixture for OCR onboarding flows."
+}

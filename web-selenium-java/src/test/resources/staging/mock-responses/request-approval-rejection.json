@@ -1,0 +1,7 @@
+{
+  "scenario": "request-approval-rejection",
+  "statusCode": 200,
+  "message": "Mock seed created for request approval and rejection",
+  "seededRecords": 2,
+  "cleanupStatusCode": 200
+}

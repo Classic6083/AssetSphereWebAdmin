@@ -1,0 +1,7 @@
+{
+  "scenario": "supplier-validation",
+  "statusCode": 200,
+  "message": "Mock seed created for supplier validation",
+  "seededRecords": 1,
+  "cleanupStatusCode": 200
+}

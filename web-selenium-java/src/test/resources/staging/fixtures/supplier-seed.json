@@ -1,0 +1,4 @@
+{
+  "scenario": "supplier-validation",
+  "description": "Seed master lookup values for GSTIN/CIN supplier validation."
+}

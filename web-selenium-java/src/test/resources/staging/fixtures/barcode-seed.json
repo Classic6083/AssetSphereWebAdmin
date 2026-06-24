@@ -1,0 +1,4 @@
+{
+  "scenario": "barcode-duplicate-scan",
+  "description": "Seed a known serial and duplicate serial for scan duplication checks."
+}

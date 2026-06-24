@@ -1,0 +1,7 @@
+{
+  "scenario": "purchase-order",
+  "statusCode": 200,
+  "message": "Mock seed created for purchase order",
+  "seededRecords": 1,
+  "cleanupStatusCode": 200
+}

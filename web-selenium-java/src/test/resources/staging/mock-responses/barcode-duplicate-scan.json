@@ -1,0 +1,7 @@
+{
+  "scenario": "barcode-duplicate-scan",
+  "statusCode": 200,
+  "message": "Mock seed created for barcode duplicate scan",
+  "seededRecords": 2,
+  "cleanupStatusCode": 200
+}

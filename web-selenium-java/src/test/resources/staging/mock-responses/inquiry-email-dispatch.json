@@ -1,0 +1,7 @@
+{
+  "scenario": "inquiry-email-dispatch",
+  "statusCode": 200,
+  "message": "Mock seed created for inquiry email dispatch",
+  "seededRecords": 1,
+  "cleanupStatusCode": 200
+}

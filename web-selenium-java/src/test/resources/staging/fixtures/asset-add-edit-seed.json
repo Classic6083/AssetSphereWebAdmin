@@ -1,0 +1,4 @@
+{
+  "scenario": "asset-add-edit",
+  "description": "Seed a predictable category, office, and serial-number pool for add/edit asset automation."
+}

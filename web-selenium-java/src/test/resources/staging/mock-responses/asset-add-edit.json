@@ -1,0 +1,7 @@
+{
+  "scenario": "asset-add-edit",
+  "statusCode": 200,
+  "message": "Mock seed created for asset add/edit",
+  "seededRecords": 1,
+  "cleanupStatusCode": 200
+}

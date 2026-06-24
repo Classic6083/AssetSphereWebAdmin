@@ -1,0 +1,7 @@
+{
+  "scenario": "bulk-ocr-onboarding",
+  "statusCode": 200,
+  "message": "Mock seed created for bulk OCR onboarding",
+  "seededRecords": 1,
+  "cleanupStatusCode": 200
+}

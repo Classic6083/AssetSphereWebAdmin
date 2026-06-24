@@ -1,0 +1,4 @@
+{
+  "scenario": "leave-approval-rejection",
+  "description": "Seed pending leave requests for approval and rejection tests."
+}

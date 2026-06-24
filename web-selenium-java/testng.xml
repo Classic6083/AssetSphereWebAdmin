@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Asset Sphere Web Suite" parallel="false">
+    <test name="Requirement Smoke Tests">
+        <classes>
+            <class name="com.assetsphere.tests.WebLoginTest"/>
+            <class name="com.assetsphere.tests.WebAuthValidationTest"/>
+            <class name="com.assetsphere.tests.WebDashboardSmokeTest"/>
+            <class name="com.assetsphere.tests.WebModuleRouteSmokeTest"/>
+        </classes>
+    </test>
+</suite>

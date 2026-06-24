@@ -1,0 +1,4 @@
+{
+  "scenario": "inquiry-email-dispatch",
+  "description": "Seed RFQ/inquiry line items and suppliers for email dispatch checks."
+}
