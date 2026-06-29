@@ -71,7 +71,7 @@ public class LoginPage extends BasePage {
         ).isDisplayed();
     }
 
-    public void openForgotPassword() {
+	public void openForgotPassword() {
         if (DemoConfig.isEnabled()) {
             System.out.println("Open forgot password page");
         }

@@ -31,7 +31,7 @@ public abstract class BasePage {
                 })
                 .filter(element -> element != null)
                 .findFirst()
-                .orElseThrow(() -> new AssertionError("None of the expected elements were visible"));
+                .orElseThrow(() -> new AssertionError("None of the expected elements were visible. " + visiblePageSummary()));
     }
 
     protected void clickFirst(By... locators) {
@@ -110,6 +110,32 @@ public abstract class BasePage {
             );
         } catch (RuntimeException ignored) {
             // Best effort only for visual runs.
+        }
+    }
+
+    private String visiblePageSummary() {
+        try {
+            String body = driver.findElement(By.tagName("body")).getText().replaceAll("\\s+", " ");
+            if (body.length() > 500) {
+                body = body.substring(0, 500);
+            }
+            String inputs = driver.findElements(By.cssSelector("input, textarea, select")).stream()
+                    .filter(WebElement::isDisplayed)
+                    .map(element -> element.getTagName()
+                            + "[type=" + element.getAttribute("type")
+                            + ", name=" + element.getAttribute("name")
+                            + ", placeholder=" + element.getAttribute("placeholder")
+                            + "]")
+                    .toList()
+                    .toString();
+            String buttons = driver.findElements(By.cssSelector("button")).stream()
+                    .filter(WebElement::isDisplayed)
+                    .map(element -> element.getText().replaceAll("\\s+", " ").trim())
+                    .toList()
+                    .toString();
+            return "URL=" + driver.getCurrentUrl() + "; visibleInputs=" + inputs + "; visibleButtons=" + buttons + "; body=" + body;
+        } catch (RuntimeException exception) {
+            return "Could not collect page summary: " + exception.getMessage();
         }
     }
 }

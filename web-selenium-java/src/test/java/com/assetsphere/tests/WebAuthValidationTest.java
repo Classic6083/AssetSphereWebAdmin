@@ -41,4 +41,36 @@ public class WebAuthValidationTest extends BaseWebTest {
 
         Assert.assertTrue(forgotPasswordPage.isLoaded(), "Forgot password page should be available from public routes");
     }
+
+    @Test
+    public void forgotPasswordRequiresValidEmail() {
+        ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage(driver, timeoutSeconds);
+        forgotPasswordPage.open(TestConfig.get("baseUrl"));
+
+        forgotPasswordPage.sendRecoveryOtp();
+
+        Assert.assertTrue(
+                forgotPasswordPage.hasValidEmailRequiredValidation(),
+                "Forgot password should show 'Valid email is required' when email is not provided"
+        );
+    }
+
+    @Test
+    public void forgotPasswordShowsErrorForStaticOtp() {
+        ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage(driver, timeoutSeconds);
+        forgotPasswordPage.open(TestConfig.get("baseUrl"));
+
+        forgotPasswordPage.enterEmail(TestConfig.get("employee.email"));
+        forgotPasswordPage.sendRecoveryOtp();
+
+        Assert.assertTrue(forgotPasswordPage.isOtpStepVisible(), "OTP step should be visible after sending recovery OTP");
+
+        forgotPasswordPage.enterOtp(TestConfig.get("forgotPassword.staticOtp"));
+        forgotPasswordPage.verifyOtpIfRequired();
+
+        Assert.assertTrue(
+                forgotPasswordPage.hasInvalidOrExpiredOtpError(),
+                "Static OTP should show invalid or expired OTP error message"
+        );
+    }
 }
